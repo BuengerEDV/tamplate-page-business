@@ -15,6 +15,13 @@ body, html
     font-weight: bold
     color: $textcolorW
 
+  .nav-list-open
+    max-height: 600px !important
+
+  .nav-list-item-open
+    left: 0 !important
+    transition: left 0.5s !important
+
 .nav
   background: $basiscolor
   min-height: 60px
@@ -36,13 +43,18 @@ body, html
     position: absolute
     top: 60px
     text-align: center
-    background: $navlistbackground
+    background: transparent
     text-transform: uppercase
     font-weight: bold
+    max-height: 0
 
     li
       padding: 20px
       border-top: 1px solid $navbordercolor
+      background: $navlistbackground
+      position: relative
+      left: -100%
+      transition: left 0.5s
 
       a
         text-decoration: none
