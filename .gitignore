@@ -1,0 +1,4 @@
+# Behinhaltet alle zu Ignorierenden Dateien und Ordner
+
+node_modules/
+dist/
