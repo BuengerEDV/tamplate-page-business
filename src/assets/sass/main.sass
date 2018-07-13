@@ -49,7 +49,7 @@ body, html
     max-height: 0
 
     li
-      padding: 20px
+      padding: 15px
       border-top: 1px solid $navbordercolor
       background: $navlistbackground
       position: relative
@@ -59,3 +59,21 @@ body, html
       a
         text-decoration: none
         color: $textcolorW
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+        svg
+          width: 30px
+          height: 30px
+
+          *
+            fill: $iconcolor
+
+          #svg_23
+            fill: none
+            stroke: $iconcolor
+
+        span
+          margin-left: 20px
+          margin-top: 3px
