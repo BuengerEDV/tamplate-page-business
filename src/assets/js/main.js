@@ -1,7 +1,6 @@
 import $ from 'jquery';
 
 $(document).ready(function() {
-  $('html').addClass('js'); // Check for javascript
   $('.nav').prepend('<span class="nav-button">☰</span>');
 
   $( ".nav-button" ).click(function() {

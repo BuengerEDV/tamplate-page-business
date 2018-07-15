@@ -38,9 +38,9 @@ gulp.task('js', function(done){
 });
 
 // ##################################################################
-// minify sass
+// minify main/critical sass
 gulp.task('sass', function(done){
-  gulp.src(src + 'assets/sass/*.sass')
+  gulp.src(src + 'assets/sass/main.sass')
     .pipe(sourcemaps.init())
       .pipe(plumber())
       .pipe(sass())
@@ -50,6 +50,17 @@ gulp.task('sass', function(done){
       .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(dist + 'assets/css'))
+    .pipe(browserSync.stream());
+  gulp.src(src + 'assets/sass/critical.sass')
+    .pipe(sourcemaps.init())
+      .pipe(plumber())
+      .pipe(sass())
+      .pipe(autoprefixer())
+      .pipe(rename({basename: 'critical'}))
+      .pipe(cleanCSS())
+      .pipe(rename({suffix: '.min'}))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(dist + 'assets/css/critical'))
     .pipe(browserSync.stream());
   done();
 });

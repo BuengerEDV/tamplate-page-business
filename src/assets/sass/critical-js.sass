@@ -1,0 +1,33 @@
+@import colors
+
+.js
+  .nav-button
+    font-size: 16pt
+    font-weight: bold
+    color: $textcolorW
+
+  .nav-list-open
+    max-height: 600px !important
+
+  .nav-list-item-open
+    left: 0 !important
+    transition: left 0.5s !important
+
+  .nav
+    position: fixed
+    padding-top: 0
+
+    .nav-list
+      position: absolute
+      margin: 0 0 0 -10px
+      top: 60px
+      max-height: 0
+
+      li
+        position: relative
+        left: -100%
+        border: none
+        border-top: 1px solid $navbordercolor
+
+  .header
+    padding-top: 60px
