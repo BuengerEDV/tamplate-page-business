@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 $(document).ready(function() {
-  $('.nav').prepend('<span class="nav-button">☰</span>');
+  $('.nav').prepend('<span class="nav-button nav-button-X"><span></span></span>');
 
   $( ".nav-button" ).click(function() {
     var navState = $('.nav-list').hasClass('nav-list-open');
@@ -11,6 +11,7 @@ $(document).ready(function() {
 
 function navopen() {
   $('.nav-list').addClass('nav-list-open');
+  $('.nav-button-X').addClass('is-active');
 
   var intTime = 0;
   $('.nav-list li').each(function(i){
@@ -28,4 +29,5 @@ function navclose(callback) {
     intTime += 200;
   });
   $('.nav-list').removeClass('nav-list-open');
+  $('.nav-button-X').removeClass('is-active');
 }
